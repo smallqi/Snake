@@ -33,7 +33,7 @@
     self.view.userInteractionEnabled = true;
     //设置视图支持多点触碰
     self.view.multipleTouchEnabled = true;
-    //创建四个方向手势处理器
+    //创建上下左右四个方向手势处理器
     for(int i=0; i<4; i++){
         //创建处理轻扫手势的手势处理器
         UISwipeGestureRecognizer* gesture = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipe:)];
@@ -84,6 +84,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+//当用户手指开始触碰窗口时响应该方法
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touch!");
+}
+/*
+//当用户手指在控件上移动时触发
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event;
+//当用户手指结束触碰时触发
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event;
+//当系统事件终止了触碰事件时触发
+-(void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event;
+*/
 
 @end
