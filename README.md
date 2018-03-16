@@ -1,4 +1,3 @@
 # Snake
 
-A simple Snake Game by iOS
-
+A simple Snake Game by iOS.
